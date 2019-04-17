@@ -1,0 +1,8 @@
+import = [
+            {
+                table = "gbi-student-011.Rproject::O_R";
+				schema = "GBI_011";
+                file = "gbi-student-011.Rproject:out_R.csv";
+                header = false;
+            }
+     ];
