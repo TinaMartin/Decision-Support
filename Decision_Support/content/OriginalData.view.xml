@@ -1,0 +1,215 @@
+<!-- this is a comment. in the next tag, the xmlns tags define
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.OriginalData" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table" 
+	xmlns:l="sap.ui.commons.layout" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<!-- view content goes here -->
+	
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+	
+
+	
+	<!-- here we have the definition of the table. 
+    	Next to different settings for the appearance 
+    	and behavior of the table, we bind the endpoint 
+    	/Sales of our data source to our rows -->
+    <table:Table 
+    	id="Id"
+    	visibleRowCount="30" 
+    	selectionMode="Single" 
+    	navigationMode="Paginator" 
+    	editable="false" 
+    	rows="{/Originaldata}"
+    	rowSelectionChange="updateDetails"> 	
+    	
+    	<!-- this defines one column in the table. The property 
+        	"sortProperty" defines the column of the data source on 
+        	which the column will sort -->
+        <table:Column sortProperty="Id">  
+        	<!-- the label is shown in the header of the table -->
+        	<table:label>
+            	<Label text="Id" design="Bold"/>
+            	<!-- for each column, a template is required which 
+            		defines how how the data is visualized -->
+            </table:label>
+        	<table:template>
+        		<!-- this textview define the actual content (aka the 
+        			rows) that are shown in the table. here, we bind the
+        			column CUSTOMER_NAME of the data source
+        			to this table column -->
+        		<Label text="{Id}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Store">
+            <table:label>
+        	    <Label text="Store" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Store}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="DayOfWeek">
+            <table:label>
+        	    <Label text="DayOfWeek" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{DayOfWeek}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Date">
+            <table:label>
+        	    <Label text="Date" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Date}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Sales">
+            <table:label>
+        	    <Label text="Sales" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Sales}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Customers">
+            <table:label>
+        	    <Label text="Customers" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Customers}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Open">
+            <table:label>
+        	    <Label text="Open" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Open}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Promo">
+            <table:label>
+        	    <Label text="Promo" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Promo}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="StateHoliday">
+            <table:label>
+        	    <Label text="StateHoliday" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{StateHoliday}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Year">
+            <table:label>
+        	    <Label text="Year" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Year}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Month">
+            <table:label>
+        	    <Label text="Month" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Month}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Day">
+            <table:label>
+        	    <Label text="Day" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Day}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="WeekOfYear">
+            <table:label>
+        	    <Label text="WeekOfYear" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{WeekOfYear}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Salespercustomers">
+            <table:label>
+        	    <Label text="Salespercustomers" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Salespercustomers}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="StoreType">
+            <table:label>
+        	    <Label text="StoreType" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{StoreType}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="CompetitionDistance">
+            <table:label>
+        	    <Label text="CompetitionDistance" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{CompetitionDistance}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="CompetitionOpenSinceMonth">
+            <table:label>
+        	    <Label text="CompetitionOpenSinceMonth" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{CompetitionOpenSinceMonth}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="CompetitionOpenSinceYear">
+            <table:label>
+        	    <Label text="CompetitionOpenSinceYear" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{CompetitionOpenSinceYear}"/>
+        	</table:template>
+        </table:Column>
+        
+    
+        
+        
+    </table:Table>
+    
+    
+    
+    <html:p/>
+    
+   
+    
+</mvc:View>

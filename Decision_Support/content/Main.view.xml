@@ -1,0 +1,45 @@
+<!-- this is a comment. in the next tag, the xmlns tags define 	
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.Main" 
+    xmlns="sap.m" 
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns:ux3="sap.ui.ux3">
+    
+	<!-- view content goes here -->
+	
+	<!-- with the first property, we're adding a small 
+    	logo to our application. --> 
+    <!-- The property workItemSelected
+    	defines the function that is called when an event
+    	for this event handler is fired -->
+    <ux3:Shell id="shell" 
+    	appIcon="/sapucc/gbi/files/dev/logo.png"
+    	appTitle="Decision Support System"
+    	showLogoutButton="true" 
+    	showSearchTool="false" 
+    	showInspectorTool="false" 
+    	showFeederTool="false"
+    	worksetItemSelected="itemSelected">
+    	
+    	<!-- we want to add our username to the header of the shell-->
+    	<ux3:headerItems>  
+    		<Text  text="Admin" tooltip="Username"/>  
+    	</ux3:headerItems>
+    	
+    	<!-- this set of items defines what we see as 
+        	navigation items in our application -->
+        <ux3:worksetItems>
+        	<!-- each navigation item has a key so we can trigger 
+        		it and a text that is shown -->
+        	<ux3:NavigationItem key="originalData" text="Original Dataset"/>
+        <!--	<ux3:NavigationItem key="overview" text="Chart Display"/> -->
+        	<ux3:NavigationItem key="salesOrders" text="Forecasted Data"/> 
+        	<ux3:NavigationItem key="analyticalImage" text="Predictive View"/>
+        	<ux3:NavigationItem key="descriptiveAnalysis" text="Descriptive View"/>
+        	
+        </ux3:worksetItems>
+    </ux3:Shell>
+    
+</mvc:View>

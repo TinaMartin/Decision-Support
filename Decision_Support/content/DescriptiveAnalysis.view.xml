@@ -1,0 +1,27 @@
+<!-- this is a comment. in the next tag, the xmlns tags define
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.DescriptiveAnalysis" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table" 
+	xmlns:l="sap.ui.commons.layout" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Carousel>
+		<pages>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/Descriptive Analysis_Customer_open.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/Descriptive Analysis_Sales_open.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/DS_8.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/DS_1.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/DS_2.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/Ds_3.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/Ds_4.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/Ds_5.jpg"/>
+			
+		</pages>
+	</Carousel> 
+
+</mvc:View>
+

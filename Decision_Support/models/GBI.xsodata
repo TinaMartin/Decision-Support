@@ -1,0 +1,16 @@
+service {
+    "GBI_DEMO"."GBI_DEMO_PRODUCT" as "Products";
+    "GBI_DEMO"."GBI_DEMO_CUSTOMER" as "Customers";
+
+    "gbi-demo::GBI_DEMO_SALES_AV" as "Sales"
+        keys generate local "ID"
+        aggregates always;
+        
+    
+    
+    "GBI_011"."Forecast_011" as "ForecastSales"
+    key generate local "ID";
+
+ "GBI_011"."gbi-student-011.Rproject::O_R" as "Originaldata"
+    key generate local "ID";
+}

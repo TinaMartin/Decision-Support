@@ -1,0 +1,77 @@
+<!-- this is a comment. in the next tag, the xmlns tags define
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.Overview" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:viz="sap.viz.ui5.controls"
+	xmlns:viz.feeds="sap.viz.ui5.controls.common.feeds"
+	xmlns:viz.data="sap.viz.ui5.data"
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<!-- view content goes here -->
+	
+	<!-- this HTML paragraph is used as a spacer -->
+	
+	<!-- the vizFrame is a control to handle a variety of different
+	    charts. The properties of the VizFrame itself only affect the 
+	    the frame of the chart. The property vizProperties is a json
+	    object which holds the configuration for the actual chart -->
+    <viz:VizFrame 
+        id="barchart" 
+        width="100%" 
+        height="800px"
+        vizType="info/line" 
+        uiConfig="{
+            applicationSet:'fiori'
+        }"
+        vizProperties="{
+            plotArea:{
+                dataLabel : {
+                    visible : true
+                },
+                dataPointSize : {
+                    min : 0,
+                    max : 4
+                }
+            },
+            title: {
+                alignment :'left', 
+                visible : true,
+                text : 'Forecast Per Year'
+            }
+        }">
+	   
+	    <!-- the chart requires a flattened dataset with 
+    		dimensions and measurement data. Here we define the 
+    		different components of the dataset based on the 
+    		model that we're binding to the view over the data
+    		property -->
+		<viz:dataset>
+			<viz.data:FlattenedDataset id="flattenedData" data="{/ForecastSales}">
+				<viz.data:dimensions>
+					<viz.data:DimensionDefinition name="Forecast Sales" value="{Forecast_Sales}" />
+				</viz.data:dimensions>
+				<viz.data:measures>
+				    <viz.data:MeasureDefinition name="Forecast Year" value="{Forecast_Year}" />
+				   
+				    
+				</viz.data:measures>
+			</viz.data:FlattenedDataset>
+		</viz:dataset>
+		
+        <!-- the feed items are required to define the mapping between the odata
+    		properties (values) and the axis (uid) -->
+		<viz:feeds>
+		    <viz.feeds:FeedItem uid="valueAxis" type="Measure" values="Forecast Year" />
+		    <viz.feeds:FeedItem uid="categoryAxis" type="Dimension" values="Forecast Sales" />
+		</viz:feeds>
+		
+	</viz:VizFrame>
+
+	<!-- the popover can be used to display additional detail information
+	    when an element of the chart is selected -->
+	<viz:Popover id="vizPopover"/>
+	
+</mvc:View>

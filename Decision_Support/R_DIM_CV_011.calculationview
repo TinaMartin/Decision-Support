@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Calculation:scenario xmlns:Calculation="http://www.sap.com/ndb/BiModelCalculation.ecore" id="R_DIM_CV_011" applyPrivilegeType="ANALYTIC_PRIVILEGE" dataCategory="DIMENSION" dimensionType="STANDARD" schemaVersion="2.3" defaultClient="$$client$$" visibility="internal" outputViewType="Projection" calculationScenarioType="TREE_BASED" enforceSqlExecution="false">
+<descriptions defaultDescription="R_DIM_CV_011"/>
+<localVariables/>
+<variableMappings/>
+<dataSources>
+  <DataSource id="gbi-student-011.Rproject::O_R" type="DATA_BASE_TABLE">
+    <viewAttributes allViewAttributes="true"/>
+    <columnObject schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R"/>
+  </DataSource>
+</dataSources>
+<calculationViews/>
+<logicalModel id="gbi-student-011.Rproject::O_R">
+  <attributes>
+    <attribute id="CompetitionDistance" order="1" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CompetitionDistance"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="CompetitionDistance"/>
+    </attribute>
+    <attribute id="CompetitionOpenSinceMonth" order="2" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CompetitionOpenSinceMonth"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="CompetitionOpenSinceMonth"/>
+    </attribute>
+    <attribute id="CompetitionOpenSinceYear" order="3" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="CompetitionOpenSinceYear"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="CompetitionOpenSinceYear"/>
+    </attribute>
+    <attribute id="Customers" order="4" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Customers"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Customers"/>
+    </attribute>
+    <attribute id="Date" order="5" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Date"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Date"/>
+    </attribute>
+    <attribute id="Day" order="6" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Day"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Day"/>
+    </attribute>
+    <attribute id="DayOfWeek" order="7" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="DayOfWeek"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="DayOfWeek"/>
+    </attribute>
+    <attribute id="Id" key="true" order="8" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Id"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Id"/>
+    </attribute>
+    <attribute id="Month" order="9" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Month"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Month"/>
+    </attribute>
+    <attribute id="Open" order="10" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Open"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Open"/>
+    </attribute>
+    <attribute id="Promo" order="11" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Promo"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Promo"/>
+    </attribute>
+    <attribute id="Sales" order="12" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Sales"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Sales"/>
+    </attribute>
+    <attribute id="Salespercustomers" order="13" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Salespercustomers"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Salespercustomers"/>
+    </attribute>
+    <attribute id="StateHoliday" order="14" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="StateHoliday"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="StateHoliday"/>
+    </attribute>
+    <attribute id="Store" order="15" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Store"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Store"/>
+    </attribute>
+    <attribute id="StoreType" order="16" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="StoreType"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="StoreType"/>
+    </attribute>
+    <attribute id="WeekOfYear" order="17" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="WeekOfYear"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="WeekOfYear"/>
+    </attribute>
+    <attribute id="Year" order="18" displayAttribute="false" attributeHierarchyActive="false">
+      <descriptions defaultDescription="Year"/>
+      <keyMapping schemaName="GBI_011" columnObjectName="gbi-student-011.Rproject::O_R" columnName="Year"/>
+    </attribute>
+  </attributes>
+  <calculatedAttributes/>
+  <baseMeasures/>
+  <calculatedMeasures/>
+  <restrictedMeasures/>
+</logicalModel>
+<layout>
+  <shapes>
+    <shape expanded="true" modelObjectName="Output" modelObjectNameSpace="MeasureGroup">
+      <upperLeftCorner x="40" y="85"/>
+    </shape>
+  </shapes>
+</layout>
+</Calculation:scenario>

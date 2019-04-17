@@ -1,0 +1,89 @@
+<!-- this is a comment. in the next tag, the xmlns tags define
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.AnalyticalImage" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table" 
+	xmlns:l="sap.ui.commons.layout" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<Carousel>
+		<pages>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/predictive_analysis.jpg"/>
+			<Image  width ="50%" height= "600px" title="Analytical Image 1" src="Images/ForecastData.jpeg"/>
+			
+		</pages>
+	</Carousel> 
+	
+	<!-- view content goes here -->
+	
+	<!-- this HTML paragraph is used as a spacer -->
+<!--	
+	<Page>
+
+  <content>
+
+    <html:div id="imageCarousel">hihi</html:div>
+
+  </content>
+
+</Page>
+
+-->
+
+
+<!--	 <List id="ListID" showSeparators="Inner" >
+                        <items >
+                            <CustomListItem  type="Active" >
+                                <l:HorizontalLayout>
+                                
+                                    <Image  width ="50%" height= "50%" title="Analytical Image 1" src="models/analytical_image1.jpeg"/>
+                                    </l:HorizontalLayout>
+                            </CustomListItem>
+                        </items>
+                        <items>
+                            <CustomListItem type="Active">
+                                <l:HorizontalLayout>
+                                <Label text="Name"></Label>
+                                    <Image  width ="50%" height= "50%" title="Analytical Image 1" src="models/analytical_image2.jpeg"/>
+                                    </l:HorizontalLayout>
+                            </CustomListItem>
+                        </items>
+                        
+                    </List>
+                    
+    -->                
+<!-- <table:Table 
+    	id="Analytic_Id"
+    	visibleRowCount="30" 
+    	selectionMode="Single" 
+    	navigationMode="Paginator" 
+    	editable="false" 
+    	rows="{/Images}"
+    	> 	
+    	
+    
+        <table:Column sortProperty="Id">  
+        	
+        	<table:label>
+            	<Label text="Id" design="Bold"/>
+            
+            </table:label>
+        	<table:template>
+        	
+        		<Label text="IMAGE"/>
+        	</table:template>
+        </table:Column>
+         </table:Table>
+
+-->
+
+
+
+
+    
+    
+    
+</mvc:View>

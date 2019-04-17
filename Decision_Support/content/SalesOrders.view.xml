@@ -1,0 +1,88 @@
+<!-- this is a comment. in the next tag, the xmlns tags define
+    namespaces, the name after of the equality signs being the name of
+    the namespace. In the code below, we can use this name in-stead of
+    the full path -->
+<mvc:View controllerName="content.SalesOrders" 
+	xmlns="sap.m" 
+	xmlns:mvc="sap.ui.core.mvc" 
+	xmlns:table="sap.ui.table" 
+	xmlns:l="sap.ui.commons.layout" 
+	xmlns:html="http://www.w3.org/1999/xhtml">
+	
+	<!-- view content goes here -->
+	
+	<!-- this HTML paragraph is used as a spacer -->
+	<html:p/>
+	
+
+	
+	<!-- here we have the definition of the table. 
+    	Next to different settings for the appearance 
+    	and behavior of the table, we bind the endpoint 
+    	/Sales of our data source to our rows -->
+    <table:Table 
+    	id="Forecast_Id"
+    	visibleRowCount="30" 
+    	selectionMode="Single" 
+    	navigationMode="Paginator" 
+    	editable="false" 
+    	rows="{/ForecastSales}"
+    	rowSelectionChange="updateDetails"> 	
+    	
+    	<!-- this defines one column in the table. The property 
+        	"sortProperty" defines the column of the data source on 
+        	which the column will sort -->
+        <table:Column sortProperty="Id">  
+        	<!-- the label is shown in the header of the table -->
+        	<table:label>
+            	<Label text="Id" design="Bold"/>
+            	<!-- for each column, a template is required which 
+            		defines how how the data is visualized -->
+            </table:label>
+        	<table:template>
+        		<!-- this textview define the actual content (aka the 
+        			rows) that are shown in the table. here, we bind the
+        			column CUSTOMER_NAME of the data source
+        			to this table column -->
+        		<Label text="{Id}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Forecast_Year">
+            <table:label>
+        	    <Label text="ForecastYear" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Forecast_Year}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Forecast Month">
+            <table:label>
+        	    <Label text="Forecast Month" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Forecast_Month}"/>
+        	</table:template>
+        </table:Column>
+        
+        <table:Column sortProperty="Forecast Sales">
+            <table:label>
+        	    <Label text="Forecast Sales" design="Bold"/>
+        	</table:label>
+        	<table:template>
+        		<Label text="{Forecast_Sales}"/>
+        	</table:template>
+        </table:Column>
+        
+        
+        
+    </table:Table>
+    
+    
+    
+    <html:p/>
+    
+   
+    
+</mvc:View>
